@@ -1,0 +1,54 @@
+{
+  "name": "financial-whatsapp-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp Financial Management Bot with Web Interface",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ../whatsapp-bot && npm install",
+    "dev": "concurrently \"cd backend && npm run dev\" \"cd frontend && npm run dev\" \"cd whatsapp-bot && npm run dev\"",
+    "build": "cd frontend && npm run build && cd ../backend && npm run build && cd ../whatsapp-bot && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "keywords": ["whatsapp", "bot", "finance", "management"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
+</create_file>
+
+<create_file>
+<path>.gitignore</path>
+<content>
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment variables
+.env
+*/.env
+
+# Build outputs
+dist/
+*/dist/
+build/
+*/build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# WhatsApp session files
+whatsapp-bot/session/
